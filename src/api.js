@@ -11,9 +11,9 @@ const getAllCategories = async () => {
     return await response.json();
 }
 
-const getFilteredCategories = async (categoryName) => {
-    const response = await fetch(API_URL + 'filter.php?c=' + categoryName);
+const getFilteredCategory = async (catName) => {
+    const response = await fetch(API_URL + 'filter.php?c=' + catName);
     return await response.json();
-}
+};
 
-export {getMealById, getAllCategories, getFilteredCategories}
+export {getMealById, getAllCategories, getFilteredCategory}

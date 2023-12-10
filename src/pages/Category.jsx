@@ -1,8 +1,8 @@
 import {useHistory, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
-import {getFilteredCategories} from "../api";
 import {Preloader} from "../components/Preloader";
 import {MealList} from "../components/MealList";
+import {getFilteredCategory} from "../api";
 
 function Category() {
     const { name } = useParams();
@@ -10,7 +10,7 @@ function Category() {
     const { goBack } = useHistory();
 
     useEffect(() => {
-        getFilteredCategories(name).then((data) => setMeals(data.meals));
+        getFilteredCategory(name).then((data) => setMeals(data.meals));
     }, [name]);
 
     return (
