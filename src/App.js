@@ -6,6 +6,7 @@ import {Home} from "./pages/Home";
 import {About} from "./pages/About";
 import {Contact} from "./pages/Contact";
 import {NotFound} from "./pages/NotFound";
+import {Movie} from "./pages/Movie";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                         <Route path="/contacts">
                             <Contact/>
                         </Route>
+                        <Route path='/movies/:id' component={Movie} />
                         <Route component={NotFound}/>
                     </Switch>
                 </main>
